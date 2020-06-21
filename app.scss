@@ -1,0 +1,22 @@
+@import './components/EmailsInput/styles';
+
+.form {
+  width: 600px;
+  height: 300px;
+  margin: 20px;
+}
+
+.btn-add-form {
+  position: fixed;
+  top: 2em;
+  right: 2em;
+  background: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none !important;
+  opacity: .5;
+  transition: .3s;
+  &:hover {
+    opacity: 1;
+  }
+}

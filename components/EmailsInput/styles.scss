@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+.emailsInput {
+  height: 100%;
+  width: 100%;
+  display: inline-flex;
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+  -webkit-box-shadow: 10px 9px 19px -9px rgba(0,0,0,0.75);
+  -moz-box-shadow: 10px 9px 19px -9px rgba(0,0,0,0.75);
+  box-shadow: 10px 9px 19px -9px rgba(0,0,0,0.75);
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+
+  &-title {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 27px;
+    padding-bottom: 32px;
+  }
+
+  &-container {
+    background: #F8F8F7;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    // align-items: center;
+    padding: 0 50px;
+  }
+
+  &-btn-container {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: start;
+    padding: 20px 50px;
+
+    .btn {
+      background: #4262FF;
+      border-radius: 6px;
+      border: none;
+      outline: none !important;
+      padding: 8px 16px;
+      text-align: center;
+      color: #FFFFFF;
+      font-family: "Open Sans", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 24px;
+      cursor: pointer;
+      &:hover {
+        background: #3954da;
+      }
+
+      &-add {
+        margin-right: 10px;
+      }
+
+      &-counter {
+
+      }
+    }
+  }
+
+  &-inner {
+    display: inline-flex;
+    height: 96px;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid #C3C2CF;
+    padding: 7px;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    cursor: text;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 3px;
+      margin-right: 3px;
+      background-color: #FFFFFF;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+      background-color: #F8F8F7;
+    }
+
+    &-input {
+      border: none;
+      display: inline-flex;
+      height: fit-content;
+      padding: 0.3em;
+      outline: none !important;
+      flex: 1;
+    }
+
+    &_box {
+      display: inline-flex;
+      justify-content: start;
+      align-items: center;
+     /*   padding: 0.2em 0.5em; */
+      height: fit-content;
+      color: #050038;
+      margin-right: 0.5em;
+      margin-bottom: .5em;
+      animation: fadein 1s;
+
+      &-text {
+        margin-right: 0.5em;
+      }
+
+      &-remover {
+        background-color: transparent;
+        border: none;
+        color: #050038;
+        margin: 0;
+        cursor: pointer;
+        padding-top: 0.2em;
+        padding-bottom: 0.2em;
+      }
+    }
+  }
+  .valide {
+    background: rgba(102, 153, 255, 0.2);
+    border-radius: 100px;
+    & .emailsInput-inner_box-remover {
+      padding-right: 0.5em;
+    }
+    & .emailsInput-inner_box-text {
+      padding-left: 0.5em;
+    }
+  }
+
+  .unvalide {
+    box-sizing: border-box;
+    border-bottom: 1px dashed #D92929;
+  }
+}
+
+@keyframes fadein {
+   from { opacity: 0; }
+   to   { opacity: 1; }
+}
