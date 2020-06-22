@@ -115,7 +115,7 @@ export default class EmailsInput {
         el.style.opacity = 0;
         setTimeout(function(self) {
             if (el.classList.contains('valide')) {
-                self._valideEmailCounter++;
+                self._valideEmailCounter--;
             }
             el.remove();
         }, ms, this);
