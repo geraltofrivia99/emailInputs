@@ -133,7 +133,7 @@ export default class EmailsInput {
         const el = document.createElement('div');
         const isValide = validateEmail(value);
         el.classList.add('emailsInput-inner_box', isValide ? 'valide' : 'unvalide');
-        el.innerHTML = `<span class="emailsInput-inner_box-text">${value}</span><img class="emailsInput-inner_box-remover" src="${image}" alt=""/>`
+        el.innerHTML = `<span class="emailsInput-inner_box-text">${value}</span><div class="emailsInput-inner_box-remover"><img src="${image}" alt=""/></div>`
         if (isValide) {
             this._valideEmailCounter++;
         }
