@@ -86,14 +86,9 @@ export default class EmailsInput {
         }, 0, this)
     }
 
-    _formatedMultyEmails(value) {
-        const someEmails = value.split(',');
-
-    }
-
     _onEmailInnerClick(e) {
-        if (e.target.classList.contains('emailsInput-inner_box-remover')) {
-            this._removeElement(e.target.parentElement, 300);
+        if (e.target.classList.contains('js-email-remover')) {
+            this._removeElement(e.target.closest('.emailsInput-inner_box'), 300);
         } else if (e.target === this._emailInner) {
             this._input.focus();
         }
@@ -133,7 +128,7 @@ export default class EmailsInput {
         const el = document.createElement('div');
         const isValide = validateEmail(value);
         el.classList.add('emailsInput-inner_box', isValide ? 'valide' : 'unvalide');
-        el.innerHTML = `<span class="emailsInput-inner_box-text">${value}</span><div class="emailsInput-inner_box-remover"><img src="${image}" alt=""/></div>`
+        el.innerHTML = `<span class="emailsInput-inner_box-text">${value}</span><div class="emailsInput-inner_box-remover js-email-remover"><img class="js-email-remover" src="${image}" alt=""/></div>`
         if (isValide) {
             this._valideEmailCounter++;
         }

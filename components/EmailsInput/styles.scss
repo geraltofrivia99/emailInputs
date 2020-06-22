@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
+$primary-fs: 14px;
+$primary-lh: 24px;
+
+$btn-bgc: #4262FF;
+$btn-bgc-hover: darken($btn-bgc, 20%);
+$unvalide-color: #D92929;
+$remove-img-size: 8px;
+
+$container-side-padding: 50px;
+
+$emails-inner-height: 96px;
+
+
 .emailsInput {
   height: 100%;
   width: 100%;
@@ -13,11 +26,11 @@
   font-family: 'Open Sans', sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: $primary-fs;
+  line-height: $primary-lh;
 
   &-title {
-    font-family: Open Sans;
+    font-family: 'Open Sans';
     font-style: normal;
     font-weight: normal;
     font-size: 20px;
@@ -32,17 +45,17 @@
     flex-direction: column;
     justify-content: center;
     // align-items: center;
-    padding: 0 50px;
+    padding: 0 $container-side-padding;
   }
 
   &-btn-container {
     background-color: #ffffff;
     display: flex;
     justify-content: start;
-    padding: 20px 50px;
+    padding: 20px $container-side-padding;
 
     .btn {
-      background: #4262FF;
+      background: $btn-bgc;
       border-radius: 6px;
       border: none;
       outline: none !important;
@@ -52,11 +65,11 @@
       font-family: "Open Sans", sans-serif;
       font-style: normal;
       font-weight: normal;
-      font-size: 14px;
-      line-height: 24px;
+      font-size: $primary-fs;
+      line-height: $primary-lh;
       cursor: pointer;
       &:hover {
-        background: #3954da;
+        background: $btn-bgc-hover;
       }
 
       &-add {
@@ -67,7 +80,7 @@
 
   &-inner {
     display: inline-flex;
-    height: 96px;
+    height: $emails-inner-height;
     background-color: white;
     border-radius: 4px;
     border: 1px solid #C3C2CF;
@@ -108,6 +121,7 @@
       margin-right: 0.5em;
       margin-bottom: .5em;
       animation: fadein 1s;
+      min-height: 24px;
 
       &-text {
         margin-right: 0.5em;
@@ -119,12 +133,17 @@
         color: #050038;
         margin: 0;
         cursor: pointer;
-        padding-top: 0.2em;
-        padding-bottom: 0.2em;
         transition: opacity .5s;
         opacity: 0.5;
+        min-height: inherit;
+        display: flex;
+        align-items: center;
         &:hover {
           opacity: 1;
+        }
+        & > img {
+          width: $remove-img-size;
+          height: $remove-img-size;
         }
       }
     }
@@ -142,7 +161,7 @@
 
   .unvalide {
     box-sizing: border-box;
-    border-bottom: 1px dashed #D92929;
+    border-bottom: 1px dashed $unvalide-color;
   }
 }
 
